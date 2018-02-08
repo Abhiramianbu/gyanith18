@@ -12,13 +12,14 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 /*-----------------------------------------------------------------------------------
 Basic Body Defaults
 -----------------------------------------------------------------------------------*/
-
 * {
 	-moz-box-sizing:    border-box;
 	-webkit-box-sizing: border-box;
 	box-sizing:         border-box;
 }
-
+body, html {
+    height: 100%;
+}
 html { 
 	font-size: 62.5%;
 	-webkit-font-smoothing: antialiased;
@@ -26,9 +27,12 @@ html {
 	margin:0;
 	padding:0;
 }
-
 body {
-	background: #2b2b2b;
+	/*background: #2b2b2b;*/
+	background-image: url("../images/gn1.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 	color: #989898;
 	font-family: "Roboto", Helvetica, Arial, sans-serif; 
 	font-size: 1.6rem;
@@ -38,7 +42,6 @@ body {
 	margin:0;
 	padding:0;
 }
-
 section {
 	display: block;
 }
@@ -52,6 +55,14 @@ Theming
 	height: auto;
 	max-width: 940px;
 	margin: 0 auto 0 auto;
+
+	position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
+
 }
 
 #dw_countdown {
@@ -69,7 +80,7 @@ h1, h2 {
 }
 
 .dw_launch_header {
-	font-size: 20px;
+	font-size: 0.9em;
 	line-height: 1;
 	margin-top:10px;
 	letter-spacing: 2px;
@@ -218,11 +229,14 @@ input[type="submit"]:hover {
 
 .top-h1{
 	letter-spacing: 2px;
-	font-size:16px;
-	font-weight:300;
+	font-size:1.2em;
+	font-weight:600;
 }
 
 .site-logo{
+	max-width: 100%;
+	height: auto;
+	
 	margin-top:5px;
 	margin-left:auto;
 	margin-right:auto;
@@ -252,9 +266,40 @@ input[type="submit"]:hover {
 	transition:0.5s all;
 }
 .fa-facebook:hover, .fa-twitter:hover, .fa-instagram:hover{
-	color: #2b2b2b;
-	background-color:#fff;
+	font-size:30px;
+	width:50px;
+	height:50px;
+	line-height:40px;
 }
+.fa-facebook:hover{
+	color:#3B5998;
+	background-color: #fff;
+}
+
+.fa-twitter:hover{
+	color:#1DA1F2;
+	background-color: #fff;
+}
+
+.fa-instagram:hover{
+	color: #fb3958;
+	background-color: #fff;
+}
+
+.col-centered {
+    display:inline-block;
+    float:none;
+    /* reset the text-align */
+    text-align:left;
+    /* inline-block space fix */
+    margin-right:-4px;
+	text-align: center;
+	
+   /* background-color: #ccc;
+    border: 1px solid #ddd;*/
+}
+
+
 .end-section{
 	margin-bottom:10px;
 }
@@ -320,7 +365,7 @@ input[type="submit"]:hover {
 
 #footer-section{
 	position:fixed;
-	bottom:20px;
+	bottom:5px;
 	width:99%;
 	margin:0px auto;
 	text-align: center;
