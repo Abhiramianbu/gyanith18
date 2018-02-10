@@ -120,11 +120,6 @@ hr {
 	background: #fff;
 	border: none;
 }
-@media screen and (min-width:359px) and (max-width:754px){
-	hr{
-		background-color: rgba(0,0,0,0);
-	}
-}
 
 p > a {
 	color: #38b789;
@@ -235,7 +230,6 @@ input[type="submit"]:hover {
 
 .end-section-hr{
 	margin: 10px auto;
-
 }
 
 .top-h1{
@@ -319,6 +313,9 @@ input[type="submit"]:hover {
 
 .end-section{
 	margin-bottom:10px;
+}
+.end-section-hr{
+	/*margin-top:15px;*/
 }
 #myVideo {
     position: fixed;
@@ -438,7 +435,8 @@ svg{
 		transform: translate(-47%, -15%);*/
 	}
 	#anchor{
-		color:#ADD8E6;
+		/*color:#ADD8E6;*/
+		color:#fff;
 	}
 	#footer-section{
 		overflow-y:auto; overflow-x:hidden; 
