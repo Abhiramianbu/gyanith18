@@ -114,11 +114,16 @@ h1, h2 {
 }
 
 hr {
-	width: 100%;
+	width: 99%;
 	margin: 60px auto;
 	height: 1px;
-	background: #333;
+	background: #fff;
 	border: none;
+}
+@media screen and (min-width:359px) and (max-width:754px){
+	hr{
+		background-color: rgba(0,0,0,0);
+	}
 }
 
 p > a {
@@ -229,7 +234,8 @@ input[type="submit"]:hover {
 }
 
 .end-section-hr{
-	margin: 10px;
+	margin: 10px auto;
+
 }
 
 .top-h1{
@@ -314,9 +320,6 @@ input[type="submit"]:hover {
 .end-section{
 	margin-bottom:10px;
 }
-.end-section-hr{
-	margin-top:15px;
-}
 #myVideo {
     position: fixed;
     right: 0;
@@ -369,7 +372,7 @@ input[type="submit"]:hover {
 }
 
 #anchor{
-	color:#989898;
+	color:#fff;
 	text-decoration: none;
 	border:0;
 }
