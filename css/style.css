@@ -18,7 +18,8 @@ Basic Body Defaults
 	box-sizing:         border-box;
 }
 body, html {
-    height: 100%;
+	height: 100%;
+	overflow: hidden;
 }
 html { 
 	font-size: 62.5%;
@@ -28,6 +29,7 @@ html {
 	padding:0;
 }
 body {
+	
 	/*background: #2b2b2b;*/
 	background-image: url("../images/gn1.jpg");
 	background-position: center;
@@ -41,6 +43,7 @@ body {
 	width:100%;
 	margin:0;
 	padding:0;
+	/*overflow: auto;*/
 }
 section {
 	display: block;
@@ -49,20 +52,22 @@ section {
 /*-----------------------------------------------------------------------------------
 Theming
 -----------------------------------------------------------------------------------*/
-
 #dw_wrapper {
 	width: 100%;
-	height: auto;
+	height: 100%;
 	max-width: 940px;
 	margin: 0 auto 0 auto;
 
 	position: fixed;
-    top: 50%;
+    top: 40%;
     left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-
-
+    -webkit-transform: translate(-50%, -40%);
+	transform: translate(-50%, -40%);
+	/*width:100%;*/
+	
+	overflow-y:auto; overflow-x:hidden; max-height: 90%;
+	text-align: center;
+	
 }
 
 #dw_countdown {
@@ -265,6 +270,12 @@ input[type="submit"]:hover {
 	color:#fff;
 	transition:0.5s all;
 }
+.fa-heart{
+	/*color: #db1825;*/
+}
+.fa-heart:hover{
+	font-size:1.5em;
+}
 .fa-facebook:hover, .fa-twitter:hover, .fa-instagram:hover{
 	font-size:30px;
 	width:50px;
@@ -326,7 +337,7 @@ input[type="submit"]:hover {
 	width:80%;
 	text-align:center;
 	margin-left:auto;
-	margin-right:auto;
+	/*margin-right:auto;*/
 }
 
 @media screen and (min-width:360px) and (max-width:374px){
@@ -358,15 +369,111 @@ input[type="submit"]:hover {
 }
 
 #anchor{
-	color: #66fcf1;
+	color:#989898;
 	text-decoration: none;
 	border:0;
 }
-
+.end-section:hover span{
+color: #66fcf1;
+}
 #footer-section{
 	position:fixed;
 	bottom:5px;
 	width:99%;
 	margin:0px auto;
 	text-align: center;
+
+	overflow:hidden; max-height: 10%;
+}
+svg{
+	/*min-width:450px; */
+	width: 58%;
+	height: 60%;
+}
+@media screen and (min-width:768px){
+.site-logo:hover{
+    height: 220px;
+    width: 580px;
+}
+}
+
+#logo-wrap{/*
+	position: fixed;
+    top: 15%;
+    left: 51.5%;
+    -webkit-transform: translate(-48.5%, -15%);
+	transform: translate(-48.5%, -15%);
+	margin-left: -22px;*/
+}
+#timer-wrap{
+	/*position: fixed;
+    top: 45%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -45%);
+	transform: translate(-50%, -45%);
+	width:100%;
+	*/
+}
+
+@media screen and (min-width:300px) and (max-width:768px){
+	body{
+		background-image: url("../images/gn2.jpg");
+	}
+	.top-h1{
+		letter-spacing: 0.5px;
+		font-size:0.8em;
+		font-weight:600;
+		
+	}
+	svg{
+		min-width:335px; ;
+		/*margin-left:20px;*/
+	}
+	#logo-wrap{
+		/*left: 53%;
+		-webkit-transform: translate(-47%, -15%);
+		transform: translate(-47%, -15%);*/
+	}
+	#anchor{
+		color:#ADD8E6;
+	}
+	#footer-section{
+		overflow-y:auto; overflow-x:hidden; 
+	}
+}
+
+@media screen and (min-width:1080px){
+	.top-h1{
+		margin-left: -39px;
+	}
+}
+@media screen and (max-width:768px) {
+	#dw_wrapper{
+		max-height: 70%
+	}
+	#footer-section{
+		max-height: 30%
+	}
+	
+}
+
+  .col-xs-offset-right-3 {
+	margin-right: 25%;
+  }
+  @media (min-width: 768px) {
+	
+	.col-sm-offset-right-3 {
+	  margin-right: 25%;
+	}
+  }
+  @media (min-width: 992px) {
+	
+	.col-md-offset-right-3 {
+	  margin-right: 25%;
+	}
+  }
+  @media (min-width: 1200px) {
+	.col-lg-offset-right-3 {
+	  margin-right: 25%;
+	}
 }
