@@ -29,7 +29,7 @@
 	</section>
 	
 	<div class="row" id="footer-section">
-		<hr class="end-section-hr">
+		<center><hr class="end-section-hr"></center>
 		<div class="col-lg-3 col-md-3 col-sm-3 col-centered">
 			<footer>
 				<div class="icon-cont">
