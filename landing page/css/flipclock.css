@@ -345,6 +345,10 @@
   .flip-clock-divider .seconds .flip-clock-label {
   right: -108px !important; }
 }
+@media screen and (min-width:1025px) and (max-width:1095px){
+  .flip-clock-divider .seconds .flip-clock-label {
+  right: -108px !important; }
+}
 
 .flip-clock-dot.top {
   top: 30px; }

@@ -1,0 +1,49 @@
+{
+    "about":
+    {
+        "supTitle": "ABOUT GYANITH",
+        "title": "WE UNITE! WE INSPIRE!",
+        "description": "<p>GYANITH literally translates to “inspiring”. Hence we are here to inspire you and give you an unforgettable experience of learning, fun and creation.</p>"
+    },
+    
+	
+	
+    
+    "footer":
+    {
+        "items":
+        [
+            {
+                "html": "info@gyanith.org",
+                "href": "https://www.google.com"
+            },
+            "Stay tuned. :)"
+        ],
+        "social":
+        [
+            {
+                "href": "https://twitter.com/gyanith"
+            }
+        ],
+		 "social":
+        [
+            {
+                "href": "https://twitter.com/gyanith"
+            }
+        ], "social":
+        [
+            {
+                "href": "https://twitter.com/gyanith"
+            }
+        ],
+        "bottom":
+        [
+            "Terms",
+            "Privacy"
+        ]
+    },
+    "contact":
+    {
+        "href": "mailto:info@gyanith.org"
+    }
+}
