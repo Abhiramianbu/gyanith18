@@ -62,6 +62,43 @@
     clear: both;
 }
 
+/* Skeleton *//*
+.flip-clock-wrapper ul {
+  position: relative;
+  float: left;
+  margin: 5px;
+  width: 60px;
+  height: 90px;
+  font-size: 4.2rem;
+  line-height: 87px;
+  border-radius: 6px;
+  background: black;
+}
+
+@media screen and (min-width:375px) and (max-width:411px){
+  .flip-clock-wrapper ul {
+    width:30.5px !important;
+  } 
+}
+
+@media screen and (min-width:412px) and (max-width:413px){
+  .flip-clock-wrapper ul{
+    width:33px !important;
+  }
+}
+
+@media screen and (min-width:414px) and (max-width: 450px){
+  .flip-clock-wrapper ul{
+    width:33px !important;
+  }
+}
+
+@media screen and(min-width: 414px) and (max-width:768px){
+  .flip-clock-wrapper ul{
+    width:33px !important;
+  }  
+}*/
+
 /* Skeleton */
 .flip-clock-wrapper ul {
   position: relative;
@@ -106,11 +143,13 @@
     width:43px !important;
   }
 }
-@media screen and (min-width:621px) and (max-width: 680px){
+@media screen and (min-width:621px) and (max-width: 768px){
   .flip-clock-wrapper ul{
     width:53px !important;
   }
 }
+
+
 
 .flip-clock-wrapper ul li {
   z-index: 1;
@@ -165,11 +204,8 @@
   z-index: 5;
   width: 100%;
   height: 3px;
-  /*background-color: #000;
-  background-color: rgba(0, 0, 0, 0.4);*/
   background-color: rgba(0,0,0,0);
-  background-color: rgba(0,0,0,0);
-}
+  background-color: rgba(0,0,0,0); }
 
 .flip-clock-wrapper ul li a div.down {
   -webkit-transform-origin: 50% 0;
@@ -186,7 +222,7 @@
   width: 100%;
   height: 200%;
   text-align: center;
-  background-color: #00477a;
+  background: #00477a;
   border-radius: 6px; }
 
 .flip-clock-wrapper ul li a div.up div.inn {
@@ -200,9 +236,9 @@
   z-index: 3; }
 
 .flip-clock-wrapper .flip {
-	font-family: 'Montserrat', sans-serif;
-	text-transform: uppercase;
-	color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  color: #fff;
 }
 
 .flip-clock-wrapper ul.play li.flip-clock-active {
@@ -233,8 +269,8 @@
   display: none;}
 
 .dw_clock .flip-clock-label {
-	font-size: 1.6rem;
-	font-weight: 500; 
+  font-size: 1.6rem;
+  font-weight: 500; 
 }
 .dw_clock{
   margin-left:70px;
@@ -271,8 +307,8 @@
   top: -2.5em;
   right: -86px;
   text-shadow: none; }
-
-@media screen and (max-width:310px){
+ 
+  @media screen and (max-width:310px){
     .flip-clock-divider{
       width: 9px;
       height: 90px;
@@ -306,6 +342,10 @@
 }
 
 @media screen and (min-width:768px) and (max-width:1024px){
+  .flip-clock-divider .seconds .flip-clock-label {
+  right: -108px !important; }
+}
+@media screen and (min-width:1025px) and (max-width:1095px){
   .flip-clock-divider .seconds .flip-clock-label {
   right: -108px !important; }
 }
@@ -530,16 +570,25 @@
     opacity: 0; } }
 
 @media screen and (max-width: 360px){
-   .flip-clock-label{
+  .flip-clock-label{
     left:-30px;
     font-size: 1.3rem;
   }  
- /*
-  .flip-clock-divider .flip-clock-label{
+/*  .flip-clock-divider .flip-clock-label{
+    right:-49px;
+  }*/  
+/*  .flip-clock-divider .flip-clock-label{
     right:-50px;
-  } 
-  .flip-clock-divider .seconds .flip-clock-label{
+  } */
+/*  .flip-clock-divider .seconds .flip-clock-label{
     right:-61px;
+  }*/
+  /*.flip-clock-wrapper ul{
+    margin:3px; 
+    width:28px;
+    font-size:2.6rem;
+    line-height:60px;
+    height:60px;
   }*/
   .flip-clock-wrapper ul{
     margin:3px; 

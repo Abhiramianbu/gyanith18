@@ -19,7 +19,7 @@
 					<?php include "logo.php";?>
 			</div>
 		</div>
-		<div class="row" style="height:20%;"></div>
+		<div class="row" id="mid-section"></div>
 		<div class="row" id="timer-wrap" >
 			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="clock-container">
 				<h1 class="dw_launch_header"  style="margin-bottom:-12px;">Going Live In</h1>
