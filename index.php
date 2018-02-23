@@ -1,4 +1,4 @@
-﻿
+
 <!DOCTYPE HTML>
 <html lang="en">
 	<head>
@@ -6,44 +6,28 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
 		<meta name="description" content="Gyanith '18 is the second version of single technical symposium of NIT Puducherry.">
 		<meta name="author" content="Web Team Gyanith,NIT Py" />
-		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-		<meta name="apple-mobile-web-app-capable" content="yes">
-		<meta name="apple-mobile-web-app-status-bar-style" content="black">
-
+		<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
 		<title>Gyanith '18</title>
-		<link rel="icon" type="image/png" href="images/gyanith-icon.png" sizes="32x32">
-		
-		<link rel="stylesheet" href="assets\css\style.css">
-
-		<!--<link rel="apple-touch-icon" sizes="57x57" href="assets\img\icons\apple-icon-57x57.png">
-		<link rel="apple-touch-icon" sizes="60x60" href="assets\img\icons\apple-icon-60x60.png">
-		<link rel="apple-touch-icon" sizes="72x72" href="assets\img\icons\apple-icon-72x72.png">
-		<link rel="apple-touch-icon" sizes="76x76" href="assets\img\icons\apple-icon-76x76.png">
-		<link rel="apple-touch-icon" sizes="114x114" href="assets\img\icons\apple-icon-114x114.png">
-		<link rel="apple-touch-icon" sizes="120x120" href="assets\img\icons\apple-icon-120x120.png">
-		<link rel="apple-touch-icon" sizes="144x144" href="assets\img\icons\apple-icon-144x144.png">
-		<link rel="apple-touch-icon" sizes="152x152" href="assets\img\icons\apple-icon-152x152.png">
-		<link rel="apple-touch-icon" sizes="180x180" href="assets\img\icons\apple-icon-180x180.png">
-		<link rel="icon" type="image/png" sizes="192x192" href="assets\img\icons\android-icon-192x192.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="assets\img\icons\favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="96x96" href="assets\img\icons\favicon-96x96.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="assets\img\icons\favicon-16x16.png">-->
-		<link rel="manifest" href="assets\img\icons\manifest.json">
+		<link rel="icon" type="image/png" href="assets/img/icons/gyanith-icon.png" sizes="32x32">
+		<link rel="stylesheet" href="assets/css/style.css">
+		<link rel="manifest" href="assets/img/icons/manifest.json">
 		<meta name="msapplication-TileColor" content="#ffffff">
 		<meta name="msapplication-TileImage" content="assets/img/icons/ms-icon-144x144.png">
 		<meta name="theme-color" content="#ffffff">
-		<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
-
-
+		<link href="assets/css/all.css" rel="stylesheet">
 	</head>
 	<body>
+		<?php
+		session_start();?>
 		<div id="loading"></div>
 		<div id="wrapper">
 			<!--<div class="sphere-overlay"></div>-->
-			<div id="container"></div>
-				<div id="logo" class="parallax-front">Gyanith'18</div>
-			<!--<img id="logo" class="parallax-front" src="assets\img\logo.svg" style="position:fixed;height:500px;"/>-->
-			<!--<div id="logo" class="parallax-front" style="background: url(assets/img/logo.svg);background-repeat: no-repeat;background-size: cover;"></div>-->
+			<div id="container" class="cl"></div>
+	
+			<div id="logo" class="parallax-front" style="font-family: 'Proxima Nova';">Gyanith'18</span></div><br/>
+			<div id="datelogo" class="parallax-front" style="font-family: 'Proxima Nova';">March 16-18</div>
+			<!-- <img id="logo" class="parallax-front" src="assets\img\logo.svg" style="position:fixed;height:500px;"/>
+			<div id="logo" class="parallax-front" style="background: url(assets/img/logo.svg);background-repeat: no-repeat;background-size: cover;"></div> -->
 		</div>
 		<div id="info"></div>
 
@@ -51,38 +35,53 @@
 
 
 		<div class="o-grid__item">
-	      <button class="c-hamburger c-hamburger--htla">
+	      <button class="c-hamburger c-hamburger--htla" >
 	        <span>toggle menu</span>
 	      </button>
 
-	      <!--<div class="account-div" id="account-div">
+	      <div class="account-div" id="account-div">
 			<i class="fas fa-user-circle" class="account-icon"></i>
 			<ul class="account-div-ul" id="account-div-ul">
-				<li><a href="javascript:void(0)">Log In</a></li>
-				<li><a href="javascript:void(0)">Register</a></li>
-				<li><a href="javascript:void(0)">My Profile</a></li>
+				<!--<li><a class="ajax-link" href="login.php">LogIn/SignUp</a></li>-->
+				<!-- <li><a href="javascript:void(0)">Register</a></li> -->
+				<!--<li><a class="ajax-link" href="final.html">My Profile</a></li>-->
+				<?php
+                	if(!isset($_SESSION['gid'])){ ?>
+                    	<li><a href="login">LogIn/Register</a></li>
+                <?php }
+                else{ ?>
+                    <li><a href="profile.php">My Profile</a></li>
+                    <li><a href="login/logout.php">Logout</a></li>
+                <?php }
+            	?>
 			</ul>
-	      </div>-->
+	      </div>
 	    </div>
 
 
 
 		<div class="content-overlay">
-
-			<a href="https://goo.gl/KqxJ6u" id="socio" target="blank"><i class="fab fa-facebook-f"></i></a><br>
-			<a href="https://goo.gl/9x7ccG" id="socio" target="blank"><i class="fab fa-twitter"></i></a><br>
-			<a href="https://goo.gl/wbJ842" id="socio" target="blank"><i class="fab fa-instagram"></i></a><br>			
+		<span id="madeby">By Webteam Gyanith | NIT Puducherry<br/></span>
+            <div class="social-link-div">
+				<a href="https://goo.gl/KqxJ6u" id="socio" target="blank"><i class="fab fa-facebook-f"></i></a>
+				<!--<a href="https://goo.gl/9x7ccG" id="socio" target="blank"><i class="fab fa-twitter" style="position:absolute; top:-150%; margin-left:20px;"></i></a><br>
+				<a href="https://goo.gl/wbJ842" id="socio" target="blank"><i class="fab fa-instagram" style="position: absolute;
+    			top: -335%; margin-left: 48px; font-size: 24px;"></i></a><br>	           -->
+				<a href="https://goo.gl/9x7ccG" id="socio" target="blank"><i class="fab fa-twitter"></i></a>
+				<a href="https://goo.gl/wbJ842" id="socio" target="blank"><i class="fab fa-instagram"></i></a>
+            </div>
+		
 
 			<div id="fullpage">
 				<div class="section" id="section0">
 					<div class="text-container">
 
-						<a href="index.php" style="text-decoration:none;"><h1><span>Gyanith'18</span></h1>
+						<a href="index.php" style="text-decoration:none;"><h1><span>Gyanith'18<br/> March 16-18</span></h1>
 							<h2>
 								<span class="splited-line"><span class="splited-line__wrapper">WE UNITE! </span></span>
 								<span class="splited-line"><span class="splited-line__wrapper">WE INSPIRE!</span></span>
 							</h2>
-							<p>GYANITH literally translates to “inspiring”. Hence we are here to inspire you and give you an unforgettable experience of learning, fun and creation.</p>
+							<p style="margin: auto;">GYANITH literally translates to “inspiring”. Hence we are here to inspire you and give you an unforgettable experience of learning, fun and creation.</p>
 						</a>
 					</div>
 				</div>
@@ -177,14 +176,16 @@
 
 			
 		</div>
-
-		<script src="assets\js\jquery-1.9.1.min.js"></script>
-  		<script type="text/javascript" src="assets\js\scripts.js"></script>
-
-  		<script type="text/javascript">
-  			$(".account-icon").hover(function(){
-  				$(".account-div-ul").slideToggle();
-  			});
-  		</script>
+		<script src="assets/js/jquery-1.9.1.min.js"></script>
+  		<script type="text/javascript" src="assets/js/scripts.js"></script>
+		<script type="text/javascript">
+			$(function() {
+			$("a.ajax-link").on("click", function(e) {
+				e.preventDefault();
+				$("#main_content").load(this.href);
+			});
+			});
+		</script>
+  		
   	</body>
 </html>
